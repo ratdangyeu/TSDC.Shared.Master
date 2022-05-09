@@ -1,4 +1,6 @@
-﻿namespace TSDC.Core.Domain.Master
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace TSDC.Core.Domain.Master
 {
     public class User : BaseEntity
     {
@@ -10,6 +12,7 @@
 
         public byte[]? PasswordSalt { get; set; }
 
+        [NotMapped]
         public string Password { get; set; }
 
         public string? FirstName { get; set; }

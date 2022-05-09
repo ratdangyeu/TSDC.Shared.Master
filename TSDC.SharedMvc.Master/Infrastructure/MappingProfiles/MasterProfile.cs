@@ -35,8 +35,7 @@ namespace TSDC.SharedMvc.Master.Infrastructure
             #endregion
 
             #region User
-            CreateMap<User, UserModel>()
-                .ForMember(x => x.Password, opt => opt.Ignore());
+            CreateMap<User, UserModel>();
             CreateMap<UserModel, User>()
                 .ForMember(x => x.UserRoles, opt => opt.Ignore())
                 .ForMember(x => x.Organization, opt => opt.Ignore())

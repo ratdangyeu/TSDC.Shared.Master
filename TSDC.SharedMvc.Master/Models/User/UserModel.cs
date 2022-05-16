@@ -1,4 +1,5 @@
 ﻿using FluentValidation;
+using System.ComponentModel.DataAnnotations;
 
 namespace TSDC.SharedMvc.Master.Models
 {
@@ -8,6 +9,7 @@ namespace TSDC.SharedMvc.Master.Models
 
         public string UserName { get; set; }
 
+        [DataType(DataType.Password)]
         public string Password { get; set; }
 
         public string? FirstName { get; set; }
